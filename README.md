@@ -134,11 +134,16 @@ pipe = Pipeline([
 
 ### Métricas de Performance
 
-![Matriz de Confusión](roc_LogisticRegression.png)
-*Figura 1: Curva ROC del mejor modelo (Regresión Logística)*
+#### Curvas ROC - Análisis Visual
 
-![Comparación de Modelos](metrics_comparison.png)
-*Figura 2: Comparación de métricas entre modelos*
+![ROC LogisticRegression](https://github.com/Emilio-Ramirez/Proyecto/blob/master/files/roc_LogisticRegression.png?raw=true)
+*Figura 1: Curva ROC - Regresión Logística (AUC=0.63)*
+
+![ROC KNN](https://github.com/Emilio-Ramirez/Proyecto/blob/master/files/roc_KNN.png?raw=true)
+*Figura 2: Curva ROC - K-Nearest Neighbors (AUC=0.57)*
+
+![ROC GaussianNB](https://github.com/Emilio-Ramirez/Proyecto/blob/master/files/roc_GaussianNB.png?raw=true)
+*Figura 3: Curva ROC - Gaussian Naive Bayes (AUC=0.60)*
 
 ### Resultados Principales
 
@@ -169,7 +174,10 @@ ProyectoFinal/
 ├── dataset_train.csv          # Datos de entrenamiento
 ├── dataset_test.csv           # Datos de prueba
 ├── pipeline_*.joblib          # Modelos entrenados
-├── roc_*.png                  # Curvas ROC
+├── files/
+│   ├── roc_*.png              # Curvas ROC
+│   ├── pipeline_*.joblib      # Modelos entrenados
+│   └── dataset_*.csv          # Datos procesados
 ├── metrics.csv                # Métricas comparativas
 ├── reporte_resumen.md         # Reporte automático
 └── README.md                  # Este documento
@@ -192,7 +200,7 @@ python proyecto_final_bolsa.py --predict AAPL
 
 1. **Datasets**: `dataset_train.csv`, `dataset_test.csv`
 2. **Modelos**: `pipeline_LogisticRegression.joblib`, etc.
-3. **Visualizaciones**: `roc_LogisticRegression.png`, etc.
+3. **Visualizaciones**: Curvas ROC disponibles en `files/roc_*.png`
 4. **Métricas**: `metrics.csv`
 5. **Reporte**: `reporte_resumen.md`
 
